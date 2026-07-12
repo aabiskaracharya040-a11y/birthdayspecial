@@ -64,10 +64,10 @@ function typeWriter() {
 
 openBtn.addEventListener("click", () => {
 
-    hero.classList.add("hidden");
-
-    mainContent.classList.remove("hidden");
-
+    hero.style.display = "none";
+    
+mainContent.style.display = "block";
+    
     window.scrollTo({
         top: 0,
         behavior: "smooth"
