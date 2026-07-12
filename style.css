@@ -1,0 +1,581 @@
+/* ===========================
+   GOOGLE FONTS & RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#ffd6e8,#ffc0cb,#ffe6f2);
+    min-height:100vh;
+    color:#ffffff;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at top,#ffffff55 0%,transparent 60%);
+    z-index:-2;
+}
+
+.hidden{
+    display:none;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.small-title{
+    font-size:25px;
+    color:#fff;
+    letter-spacing:2px;
+}
+
+.name{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+    margin:20px 0;
+    text-shadow:0 0 20px #ff69b4;
+}
+
+.subtitle{
+    font-size:22px;
+    max-width:700px;
+    margin-bottom:40px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    padding:18px 42px;
+    border-radius:40px;
+    background:#ff4f94;
+    color:white;
+    font-size:20px;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(255,20,147,.35);
+}
+
+button:hover{
+    transform:translateY(-6px) scale(1.05);
+    background:#ff2f80;
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.glass{
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
+    padding:50px;
+    text-align:center;
+    background:rgba(255,255,255,.15);
+    border-radius:30px;
+    backdrop-filter:blur(16px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.birthday{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.aarohi{
+    font-size:40px;
+    margin-bottom:35px;
+}
+
+#typing{
+    font-size:22px;
+    line-height:1.8;
+    min-height:180px;
+}
+
+/* ===========================
+   LETTER
+=========================== */
+
+.letter{
+    width:92%;
+    max-width:850px;
+    margin:80px auto;
+    background:white;
+    color:#444;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.letter h2{
+    text-align:center;
+    color:#ff4f94;
+    margin-bottom:30px;
+}
+
+.letter p{
+    font-size:20px;
+    line-height:2;
+    white-space:pre-line;
+}
+
+.letter button{
+    display:block;
+    margin:40px auto 0;
+}
+
+/* ===========================
+   ROSE CARD
+=========================== */
+
+.roseCard{
+    width:90%;
+    max-width:700px;
+    margin:100px auto;
+    text-align:center;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:50px;
+}
+
+.rose{
+    font-size:110px;
+    animation:floatRose 3s ease-in-out infinite;
+}
+
+@keyframes floatRose{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+.roseCard h2{
+    margin:20px 0;
+    font-size:40px;
+}
+
+.roseCard p{
+    font-size:22px;
+    line-height:1.8;
+}
+/* ===========================
+   CAKE SECTION
+=========================== */
+
+#cakeSection{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+#cakeSection h1{
+    font-size:130px;
+    animation:bounceCake 2s infinite;
+}
+
+#cakeSection h2{
+    font-size:48px;
+    margin:20px 0;
+}
+
+#cakeSection p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+@keyframes bounceCake{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-18px);}
+}
+
+/* ===========================
+   FINAL CARD
+=========================== */
+
+.finalCard{
+    width:92%;
+    max-width:900px;
+    margin:70px auto;
+    padding:50px;
+    text-align:center;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.finalCard h1{
+    font-family:'Great Vibes',cursive;
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.finalCard h2{
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.finalCard p{
+    font-size:21px;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.finalCard h3{
+    margin-top:20px;
+    color:#fff;
+}
+
+.musicNote{
+    margin-top:20px;
+    font-size:15px;
+    opacity:.8;
+}
+
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+#hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    bottom:-60px;
+    font-size:24px;
+    animation:floatHeart linear forwards;
+    opacity:.8;
+}
+
+@keyframes floatHeart{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* ===========================
+   FLOATING BALLOONS
+=========================== */
+
+#balloons{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.balloon{
+    position:absolute;
+    bottom:-120px;
+    font-size:55px;
+    animation:balloonFloat linear forwards;
+}
+
+@keyframes balloonFloat{
+
+from{
+    transform:translateY(0);
+}
+
+to{
+    transform:translateY(-130vh);
+}
+
+}
+
+/* ===========================
+   SPARKLES
+=========================== */
+
+#sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.sparkle{
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.2;
+transform:scale(.5);
+}
+
+50%{
+opacity:1;
+transform:scale(2);
+}
+
+}
+/* ===========================
+   CONFETTI CANVAS
+=========================== */
+
+#confetti{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:999;
+}
+
+/* ===========================
+   FADE ANIMATIONS
+=========================== */
+
+.hero,
+.glass,
+.letter,
+.roseCard,
+#cakeSection,
+.finalCard{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* ===========================
+   GLOWING TEXT
+=========================== */
+
+.name,
+.birthday,
+.finalCard h1{
+    animation:glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+
+from{
+    text-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4;
+}
+
+to{
+    text-shadow:
+    0 0 25px #ffffff,
+    0 0 50px #ff69b4,
+    0 0 70px #ff69b4;
+}
+
+}
+
+/* ===========================
+   BUTTON CLICK
+=========================== */
+
+button:active{
+    transform:scale(.95);
+}
+
+/* ===========================
+   CUSTOM SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffd7e8;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff5ea8;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff2f80;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    color:white;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.name{
+    font-size:64px;
+}
+
+.birthday{
+    font-size:54px;
+}
+
+.aarohi{
+    font-size:32px;
+}
+
+.glass,
+.letter,
+.roseCard,
+.finalCard{
+    padding:30px;
+}
+
+.letter p,
+.finalCard p,
+#typing,
+.roseCard p{
+    font-size:18px;
+}
+
+button{
+    width:90%;
+    max-width:320px;
+    font-size:18px;
+    padding:16px 24px;
+}
+
+#cakeSection h1{
+    font-size:90px;
+}
+
+#cakeSection h2{
+    font-size:34px;
+}
+
+}
+
+@media(max-width:600px){
+
+.small-title{
+    font-size:18px;
+}
+
+.name{
+    font-size:48px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.birthday{
+    font-size:42px;
+}
+
+.aarohi{
+    font-size:26px;
+}
+
+.finalCard h1{
+    font-size:46px;
+}
+
+.finalCard h2{
+    font-size:24px;
+}
+
+.letter{
+    padding:25px;
+}
+
+.letter p{
+    line-height:1.8;
+}
+
+.rose{
+    font-size:80px;
+}
+
+}
+
+/* ===========================
+   END
+=========================== */
+
