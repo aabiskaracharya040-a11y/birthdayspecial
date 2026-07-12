@@ -63,6 +63,7 @@ function typeWriter() {
 // ===================================
 
 openBtn.addEventListener("click", () => {
+    console.log("button clicked!");
 
     hero.style.display = "none";
     
