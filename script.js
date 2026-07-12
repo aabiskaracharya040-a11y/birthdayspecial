@@ -59,15 +59,14 @@ function typeWriter() {
 }
 
 // ===================================
-// Navigation
+// Navigation Fix
 // ===================================
 
 openBtn.addEventListener("click", () => {
     console.log("button clicked!");
 
-    hero.style.display = "none";
-    
-mainContent.style.display = "block";
+    hero.classList.add("hidden");            // Use class lists instead of style.display
+    mainContent.classList.remove("hidden"); // Correctly remove hidden class
     
     window.scrollTo({
         top: 0,
@@ -75,11 +74,18 @@ mainContent.style.display = "block";
     });
 
     typeWriter();
-
 });
 
-nextBtn.addEventListener("click", () => {
+// Update the automatic timer block so it checks visibility correctly:
+setTimeout(() => {
+    if (!mainContent.classList.contains("hidden")) {
+        letterSection.classList.remove("hidden");
+    }
+}, 14000);
 
+nextBtn.addEventListener("click", () => {
+    // Hide BOTH the main text block and the letter section cleanly
+    mainContent.classList.add("hidden");
     letterSection.classList.add("hidden");
 
     roseSection.classList.remove("hidden");
@@ -88,35 +94,27 @@ nextBtn.addEventListener("click", () => {
         top: 0,
         behavior: "smooth"
     });
-
 });
 
 cakeBtn.addEventListener("click", () => {
-
     roseSection.classList.add("hidden");
-
     cakeSection.classList.remove("hidden");
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 });
 
 celebrateBtn.addEventListener("click", () => {
-
     cakeSection.classList.add("hidden");
-
     finalSection.classList.remove("hidden");
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 });
-
 // ===================================
 // Automatically show the letter
 // after typing finishes
